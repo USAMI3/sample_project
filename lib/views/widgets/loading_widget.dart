@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:sample_project/core/app/colors.dart';
 
-class SpinKitChasingDots extends StatefulWidget {
-  const SpinKitChasingDots({
+class LoadingDots extends StatefulWidget {
+  const LoadingDots({
     Key? key,
     this.color,
     this.size = 50.0,
@@ -20,10 +20,10 @@ class SpinKitChasingDots extends StatefulWidget {
   final Duration duration;
 
   @override
-  _SpinKitChasingDotsState createState() => _SpinKitChasingDotsState();
+  _LoadingDotsState createState() => _LoadingDotsState();
 }
 
-class _SpinKitChasingDotsState extends State<SpinKitChasingDots>
+class _LoadingDotsState extends State<LoadingDots>
     with TickerProviderStateMixin {
   late AnimationController _scaleCtrl;
   late AnimationController _rotateCtrl;
@@ -92,6 +92,6 @@ class LoaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SpinKitChasingDots(color: AppColors.exampleColor);
+    return const LoadingDots(color: AppColors.exampleColor);
   }
 }
